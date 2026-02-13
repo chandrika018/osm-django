@@ -1,6 +1,15 @@
 from django.db import models
 
 # Create your models here.
+class company(models.Model):
+    name=models.CharField(max_length=125)
+    location = models.CharField(max_length=125)
+    logo = models.CharField(max_length=125)
+    
+    def __str__(self):
+        return self.name
+    
+
 class employee(models.Model):
     name = models.CharField(max_length = 122)
     email = models.CharField(max_length = 122)
